@@ -1,8 +1,8 @@
 import { createStore } from "redux"
 
 const initialState = {
-    amount: 12.00,
-    currencyCode: 'USD',
+    amount: "9.99",
+    currencyCode: 'EUR',
 }
 
 function reducer(state = initialState, action) {
