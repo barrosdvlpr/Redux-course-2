@@ -6,7 +6,7 @@ export function CurrencyCodePicker({
 }) {
   const dispatch = useDispatch()
   function onChange(e) {
-    dispatch({ type: "currencyCodeChanged", payload: e.target.value });
+    dispatch({ type: "rates/currencyCodeChanged", payload: e.target.value });
   }
   return (
     <select className="currencyCode" value={currencyCode} onChange={onChange}>
