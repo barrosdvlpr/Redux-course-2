@@ -13,3 +13,8 @@ export function ratesReducer(state = initialState, action) {
         default: return state;
     }
 }
+
+// Selectors
+
+export const getAmount = state => state.rates.amount
+export const getCurrecyCode = state => state.rates.currencyCode
