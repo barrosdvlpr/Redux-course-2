@@ -8,19 +8,12 @@ import {
   getCurrencyCode,
   getCurrencyData,
   supportedCurrencies,
-  changeCurrencyCode,
 } from "../store/rates";
 
 export function ExchangeRate() {
-  const dispatch = useDispatch();
   const amount = useSelector(getAmount);
   const currencyCode = useSelector(getCurrencyCode);
   const currencyData = useSelector(getCurrencyData);
-
-  // fetch the exchange rates the first time
-  useEffect(() => {
-    dispatch(changeCurrencyCode(currencyCode));
-  }, []);
 
   return (
     <>
