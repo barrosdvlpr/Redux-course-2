@@ -4,8 +4,8 @@
 import { fetch } from "./lib/fetch";
 
 // helper to make our exchange rate API call
-export function getExchangeRates(base, supportedCurrencies) {
-  const symbols = supportedCurrencies
+export function getExchangeRates(base, supportedSymbols) {
+  const symbols = supportedSymbols
     .filter((symbol) => symbol !== base) // exclude your own code from requested symbols
     .join();
   const url = `http://api.exchangeratesapi.io/latest?base=${base}&symbols=${symbols}`;
