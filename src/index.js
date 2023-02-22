@@ -1,14 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
-import { store } from "../src/store/store";
 import { ExchangeRate } from "./components/ExchangeRate";
-import { getInitialRates } from "./store/rates";
+import { store } from "./store";
+// import { updateCurrencyCode } from "./reducers/RateReducer";
 import "./style.css";
 
-// start AJAX 
-
-store.dispatch(getInitialRates)
+// kick start the exchange rate call
+// store.dispatch(updateCurrencyCode());
 
 ReactDOM.render(
   <Provider store={store}>
